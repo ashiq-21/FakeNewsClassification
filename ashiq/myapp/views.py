@@ -1,4 +1,4 @@
-# detector/views.py
+
 
 from django.shortcuts import render
 from .ml_model import model, vectorizer
@@ -13,5 +13,5 @@ def index(request):
             val = "real"
         else:
             val = "fake" 
-        return render(request, 'result.html', {'prediction': val})
+        return render(request, 'result.html', {'prediction': val,'news':news})
     return render(request, 'index.html')
